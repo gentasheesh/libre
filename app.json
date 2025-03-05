@@ -1,0 +1,70 @@
+{
+   "logo": "https://discord.com/assets/2c21aeda16de354ba5334551a883b481.png",
+   "env": {
+      "mainToken": {
+         "description": "Your main account's token, used for redeeming the gift.",
+         "required": true
+      },
+      "guildTokens": {
+         "description": "Your alt accounts tokens. Required if useMain is set to false. (Split multiple tokens with \",\")",
+         "required": false
+      },
+      "nitro_webhookUrl": {
+         "description": "Put here your webhook url if you wish to receive messages when a gift is redeemed.",
+         "required": false
+      },
+      "notes_webhookUrl": {
+         "description": "Put here your webhook url if you wish to receive messages when notes are sniped.",
+         "required": false
+      },
+      "useMain": {
+         "description": "Do you want to use your main token for sniping?",
+         "required": true,
+         "value": "false"
+      },
+      "legitimacyCheck": {
+         "description": "Does some magic to check if the code could be legitimate but will slow the sniper down",
+         "required": true,
+         "value": "true"
+      },
+      "obfuscationCheck": {
+         "description": "Does some magic to remove obfuscation from codes but will slow the sniper down",
+         "required": true,
+         "value": "true"
+      },
+      "notesCheck": {
+         "description": "Does some magic to check for privnotes link. Little performance impact. IMPORTANT: This will snipe all privnote links (except your own) and destroy them!",
+         "required": true,
+         "value": "true"
+      },
+      "writeNotes": {
+         "description": "Whether you want all sniped notes to be written in the ./notes folder. Doesn't slow the sniper down.",
+         "required": true,
+         "value": "true"
+      },
+      "tokenStatus": {
+         "description": "The status of guildTokens: {online, idle, invisible, dnd}",
+         "required": true,
+         "value": "online"
+      },
+      "mainStatus": {
+         "description": "The status of your main token: {online, idle, invisible, dnd}. useMain must be set to true or this is useless. This status will be overwritten by other discord clients.",
+         "required": false,
+         "value": "invisible"
+      },
+      "permanentCache": {
+         "description": "Cache usedTokens to disk. No performance impact but will increase the memory used.",
+         "required": true,
+         "value": "false"
+      },
+      "webhookping_userid": {
+         "description": "If set will ping the userid in the nitro_webhook (i.e. upon successful sniping).",
+         "required": false
+      },
+      "replit": {
+         "description": "Set to true only if you are running the sniper on repl.it.",
+         "required": true,
+         "value": "false"
+      }
+   }
+}
